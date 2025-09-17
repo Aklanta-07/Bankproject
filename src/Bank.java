@@ -178,7 +178,7 @@ public class Bank {
           switch (Option){
               case 1:{
                   System.out.println("Enter new Name");
-                //  account.setAccHName(scanner.nextLine());
+                  account.setAccHName(scanner.nextLine());
                   break;
               }
               case 2:{
