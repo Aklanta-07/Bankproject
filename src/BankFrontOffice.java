@@ -13,8 +13,10 @@ public class BankFrontOffice {
             System.out.println("4.Withdraw");
             System.out.println("5.Balance Enquiry");
             System.out.println("6.Transfer Money");
-            System.out.println("7.Display All Accounts");
-            System.out.println("8.Exit");
+            System.out.println("7.Update Account");
+            System.out.println("8.Close Account");
+            System.out.println("9.Display All Accounts");
+            System.out.println("10.Exit");
 
             System.out.println("Enter Option:");
             int option = scn.nextInt();
@@ -81,11 +83,25 @@ public class BankFrontOffice {
                         break;
                     }
                     case 7:{
+                        System.out.println("Enter Account no");
+                        long accNum = scn.nextLong();
+                        scn.nextLine();
+                        hdfcBank.updateAccount(accNum);
+                        break;
+                    }
+                    case 8:{
+                        System.out.println("Enter Account no");
+                        long accNum = scn.nextLong();
+                        scn.nextLine();
+                        hdfcBank.closeAccount(accNum);
+                        break;
+                    }
+                    case 9:{
                         System.out.println("The available account in Bank");
                         System.out.println(hdfcBank);//hdfcBank.toString()
                         break;
                     }
-                    case 8:{
+                    case 10:{
                         System.out.println("ThankYou, Have a good day ");
                         break loop;
                     }
